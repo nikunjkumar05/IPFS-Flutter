@@ -9,6 +9,10 @@ build/
 # Directory created by dartdoc
 doc/api/
 
+# Generated plugin registrants
+**/flutter/generated_plugin_registrant.*
+**/flutter/generated_plugins.cmake
+
 # IDE
 .vscode/
 .idea/
