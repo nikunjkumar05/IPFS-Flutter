@@ -23,7 +23,7 @@ abstract class IpfsService extends ChopperService {
   Future<Response<Id>> id();
 
   @Post(path: '/get', optionalBody: true)
-  Future<Response<Cat>> get(@Query('arg') String arg);
+  Future<Response<String>> get(@Query('arg') String arg);
 
   @Post(path: '/ls', optionalBody: true)
   Future<Response<Ls>> ls(@Query('arg') String arg);

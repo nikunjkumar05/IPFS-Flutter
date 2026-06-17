@@ -28,11 +28,11 @@ class _PubSubScreenState extends State<PubSubScreen> {
   }
 
   Future<void> _subscribe() async {
-    setState(() { _loading = true; _output = 'Subscribing...'; });
+    setState(() { _loading = true; _output = 'Subscribing to ${_topicController.text}...\nWaiting for messages...'; });
     try {
       final ipfs = Ipfs(url: ipfsUrl);
       final res = await ipfs.pubsubSubscribe(_topicController.text);
-      setState(() { _output = 'Subscribed to ${_topicController.text}\nResponse: ${res.body}'; });
+      setState(() { _output = 'Subscribed to ${_topicController.text}\nResponse: ${res.body ?? '(empty)'}'; });
     } catch (e) {
       setState(() { _output = 'Error: $e'; });
     } finally {

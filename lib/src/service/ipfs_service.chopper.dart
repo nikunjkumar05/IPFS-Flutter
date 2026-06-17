@@ -61,7 +61,7 @@ final class _$IpfsService extends IpfsService {
   }
 
   @override
-  Future<Response<Cat>> get(String arg) {
+  Future<Response<String>> get(String arg) {
     final Uri $url = Uri.parse('/api/v0/get');
     final Map<String, dynamic> $params = <String, dynamic>{'arg': arg};
     final Request $request = Request(
@@ -70,7 +70,7 @@ final class _$IpfsService extends IpfsService {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Cat, Cat>($request);
+    return client.send<String, String>($request);
   }
 
   @override
@@ -147,7 +147,8 @@ final class _$IpfsService extends IpfsService {
   @override
   Future<Response<PubSubPeersResponse>> pubsubPeers([String? topic]) {
     final Uri $url = Uri.parse('/api/v0/pubsub/peers');
-    final Map<String, dynamic> $params = <String, dynamic>{'topic': topic};
+    final Map<String, dynamic> $params = <String, dynamic>{};
+    if (topic != null) $params['topic'] = topic;
     final Request $request = Request(
       'POST',
       $url,

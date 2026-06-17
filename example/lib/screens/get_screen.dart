@@ -18,7 +18,7 @@ class _GetScreenState extends State<GetScreen> {
     try {
       final ipfs = Ipfs(url: ipfsUrl);
       final res = await ipfs.get(_controller.text);
-      setState(() { _output = res.body?.body ?? '(empty)'; });
+      setState(() { _output = res.body ?? '(empty)'; });
     } catch (e) {
       setState(() { _output = 'Error: $e'; });
     } finally {

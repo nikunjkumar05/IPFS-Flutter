@@ -39,7 +39,7 @@ class Ipfs {
   }
 
   /// Downloads file data from IPFS by CID via '/api/v0/get'.
-  Future<Response<Cat>> get(String arg) {
+  Future<Response<String>> get(String arg) {
     return _service.get(arg);
   }
 
