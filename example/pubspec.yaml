@@ -12,6 +12,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   dart_ipfs_client:
     path: ..
+  mopro_flutter_bindings:
+    path: ../mopro_flutter_bindings
+  path_provider: ^2.1.4
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +23,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/multiplier2_final.zkey
+    - assets/multiplier2.bin

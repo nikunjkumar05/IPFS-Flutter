@@ -6,6 +6,7 @@ import 'get_screen.dart';
 import 'ls_screen.dart';
 import 'swarm_screen.dart';
 import 'pubsub_screen.dart';
+import 'zk_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
       _Feature('Ls', 'List directory contents', Icons.list, const LsScreen()),
       _Feature('Swarm', 'Connect/disconnect peers', Icons.hub, const SwarmScreen()),
       _Feature('PubSub', 'Publish/subscribe messaging', Icons.message, const PubSubScreen()),
+      _Feature('ZK Proof', 'Generate & verify ZK proofs', Icons.lock, const ZkScreen()),
     ];
 
     return Scaffold(

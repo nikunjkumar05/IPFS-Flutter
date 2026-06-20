@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mopro_flutter_bindings/mopro_flutter_bindings.dart';
 import 'screens/home_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await RustLib.init();
   runApp(const MyApp());
 }
 
